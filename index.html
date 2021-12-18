@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./index.js"></script>
+    <title>Projet 1</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Stack infos</h1>
+        <!-- Bloc question radio button -->
+        <div id="question1" class="question">
+            <div class="title">
+
+                <h3>Votre language de programmation préféré</h3>
+            </div>
+            <div class="answer">
+                <div>
+                    <input type="radio" id="js" name="q1" value="JavaScript"> 
+                    <label for="js">Javascript</label>
+                </div>
+                <div>
+
+                    <input type="radio" id="Py" name="q1"  value="Python" >
+                    <label for="Py">Python</label>
+                </div>
+                <div>
+                    <input type="radio" id="Ts" name="q1" value="Typescript" >
+                    <label for="Ts">Typescript</label>
+                </div>
+                    
+            </div>
+        </div>
+        <!-- Bloc question checkbox -->
+        <div id="question2" class="question">
+            <div class="title">
+
+                <h3>Votre framework Javascript préféré</h3>
+            </div>
+            <div class="answer">
+                <div>
+                    <input type="checkbox" id="react" name="react" value="react"> 
+                    <label for="react">React</label>
+                </div>
+                <div>
+
+                    <input type="checkbox" id="vuejs" name="vuejs"  value="vuejs" >
+                    <label for="vuejs">Vuejs</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="angular" name="angular" value="angular" >
+                    <label for="angular">Angular</label>
+                </div>
+                    
+            </div>
+        </div>
+        <!-- Bloc provider CI/CD -->
+        <div id="question3" class="question response">
+            <div class="title title3">
+
+                <h3 > Votre provider d'intégration continue</h3>
+            </div>
+            <div class="answer">
+                <div>
+                    <input data-cy="react" type="radio" id="react" name="q3" value="react"> 
+                    <label for="react">Gitlab</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="vuejs" name="q3"  value="vuejs" >
+                    <label for="vuejs">Github</label>
+                </div>
+                <div>
+                    <input type="radio" id="angular" name="q3" value="angular" >
+                    <!-- à vérifier -->
+                    <label for="angular">Bitbucker</label> 
+                </div>
+            
+            </div>
+
+    </div>
+    
+</body>
+</html>
