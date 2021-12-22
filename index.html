@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premier projet</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Quiz Automation !</h1>
+
+    <div class="container-global">
+      <form class="form-quiz">
+        <div class="question-block">
+          <h4>Javascript est un langage ...</h4>
+
+          <div>
+            <input type="radio" id="compilé" name="q1" value="a" />
+            <label form="compilé">Compilé</label>
+          </div>
+          <div>
+            <input type="radio" id="interprété" name="q1" value="b" />
+            <label for="interprété">Interprété</label>
+          </div>
+
+          <div>
+            <input type="radio" id="haut niveau" name="q1" value="c" />
+            <label for="haut niveau">Haut niveau</label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <h4>Qui a créé l'outil cypress ?</h4>
+          <div>
+            <input type="radio" id="kemal" name="q2" value="a" />
+            <label for="kemal">Kemal Mezhoud</label>
+          </div>
+
+          <div>
+            <input type="radio" id="karim" name="q2" value="b" />
+            <label for="karim">Karim Benzema</label>
+          </div>
+
+          <div>
+            <input type="radio" id="drew" name="q2" value="c" />
+            <label for="drew">Drew Lanham</label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <h4>HTML & CSS sont ils des langages de programmation ?</h4>
+          <div>
+            <input type="radio" id="oui" name="q3" value="a" />
+            <label for="oui">Oui</label>
+          </div>
+
+          <div>
+            <input type="radio" id="dnon" name="q3" value="b" />
+            <label for="non">Non</label>
+          </div>
+
+          <div>
+            <input type="radio" id="peut_etre" name="q3" value="c" />
+            <label for="peut_etre">peut être</label>
+          </div>
+        </div>
+
+        <button type="submit">Validez vos choix !</button>
+      </form>
+
+      <div class="resultats">
+        <h2>Résultats ✔️ ✨ 👎</h2>
+        <p class="note"></p>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

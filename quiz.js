@@ -67,7 +67,7 @@ function verifFunc(tabResultats) {
             break;
 
         case 3:
-        titreResultat.innerText = "😭 Essayer à nouveau, l'espoir fait vivre 😭"
+        titreResultat.innerText = "😭 Essayez à nouveau, l'espoir fait vivre 😭"
         noteResultat.innerText = '0/3'
             break;
 
