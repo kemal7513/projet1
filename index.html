@@ -1,88 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="./index.js"></script>
-    <title>Projet 1</title>
-</head>
-<body>
-    
-    <div class="container">
-        <h1>Stack infos</h1>
-        <!-- Bloc question radio button -->
-        <div id="question1" class="question">
-            <div class="title">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premier projet</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Quiz Automation !</h1>
 
-                <h3>Votre language de programmation préféré</h3>
-            </div>
-            <div class="answer">
-                <div>
-                    <input type="radio" id="js" name="q1" value="JavaScript"> 
-                    <label for="js">Javascript</label>
-                </div>
-                <div>
+    <div class="container-global">
+      <form class="form-quiz">
+        <div class="question-block">
+          <h4>Javascript est un language ...</h4>
 
-                    <input type="radio" id="Py" name="q1"  value="Python" >
-                    <label for="Py">Python</label>
-                </div>
-                <div>
-                    <input type="radio" id="Ts" name="q1" value="Typescript" >
-                    <label for="Ts">Typescript</label>
-                </div>
-                    
-            </div>
+          <div>
+            <input type="radio" id="compilé" name="q1" value="a" />
+            <label form="compilé">Compilé</label>
+          </div>
+          <div>
+            <input type="radio" id="interprété" name="q1" value="b" />
+            <label for="interprété">Interprété</label>
+          </div>
+
+          <div>
+            <input type="radio" id="haut niveau" name="q1" value="c" />
+            <label for="haut niveau">Haut niveau</label>
+          </div>
         </div>
-        <!-- Bloc question checkbox -->
-        <div id="question2" class="question">
-            <div class="title">
 
-                <h3>Votre framework Javascript préféré</h3>
-            </div>
-            <div class="answer">
-                <div>
-                    <input type="checkbox" id="react" name="react" value="react"> 
-                    <label for="react">React</label>
-                </div>
-                <div>
+        <div class="question-block">
+          <h4>Qui a créé l'outil cypress ?</h4>
+          <div>
+            <input type="radio" id="kemal" name="q2" value="a" />
+            <label for="kemal">Kemal Mezhoud</label>
+          </div>
 
-                    <input type="checkbox" id="vuejs" name="vuejs"  value="vuejs" >
-                    <label for="vuejs">Vuejs</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="angular" name="angular" value="angular" >
-                    <label for="angular">Angular</label>
-                </div>
-                    
-            </div>
+          <div>
+            <input type="radio" id="karim" name="q2" value="b" />
+            <label for="karim">Karim Benzema</label>
+          </div>
+
+          <div>
+            <input type="radio" id="drew" name="q2" value="c" />
+            <label for="drew">Drew Lanham</label>
+          </div>
         </div>
-        <!-- Bloc provider CI/CD -->
-        <div id="question3" class="question response">
-            <div class="title title3">
 
-                <h3 > Votre provider d'intégration continue</h3>
-            </div>
-            <div class="answer">
-                <div>
-                    <input data-cy="react" type="radio" id="react" name="q3" value="react"> 
-                    <label for="react">Gitlab</label>
-                </div>
-                
-                <div>
-                    <input type="radio" id="vuejs" name="q3"  value="vuejs" >
-                    <label for="vuejs">Github</label>
-                </div>
-                <div>
-                    <input type="radio" id="angular" name="q3" value="angular" >
-                    <!-- à vérifier -->
-                    <label for="angular">Bitbucker</label> 
-                </div>
-            
-            </div>
+        <div class="question-block">
+          <h4>HTML & CSS sont ils des languages de programmation ?</h4>
+          <div>
+            <input type="radio" id="oui" name="q3" value="a" />
+            <label for="oui">Oui</label>
+          </div>
 
+          <div>
+            <input type="radio" id="dnon" name="q3" value="b" />
+            <label for="non">Non</label>
+          </div>
+
+          <div>
+            <input type="radio" id="peut_etre" name="q3" value="c" />
+            <label for="peut_etre">peut être</label>
+          </div>
+        </div>
+
+        <button type="submit">Validez vos choix !</button>
+      </form>
+
+      <div class="resultats">
+        <h2>Résultats ✔️ ✨ 👎</h2>
+        <p class="note"></p>
+      </div>
     </div>
-    
-</body>
+
+    <script src="quiz.js"></script>
+  </body>
 </html>
