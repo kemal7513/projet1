@@ -39,7 +39,7 @@ h1 {
 .question-block label {
   font-size: 20px;
 }
-
+/* Tous les types qui ont la valeur radio */
 .question-block input[type="radio"] {
   transform: scale(1.8);
   margin: 10px;
@@ -60,13 +60,29 @@ h1 {
   font-size: 25px;
   margin-top: 10px;
 }
+.inLineButton {
+  display: inline-block;
+  text-align: center;
+}
 
 form button {
   border: none;
   outline: none;
   border: 1px solid #333;
   border-radius: 5px;
-  display: block;
+  margin: 20px 60px;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+}
+
+.refresh {
+  border: none;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 5px;
   margin: 20px auto;
   padding: 20px 40px;
   cursor: pointer;
@@ -81,7 +97,7 @@ form button:hover {
 .echec {
   animation: echec 0.3s ease-in-out;
 }
-
+/* les paramètres de l'echec: les animations*/
 @keyframes echec {
   0% {
     transform: translateX(0px);

@@ -4,6 +4,7 @@ const reponses = ['b','c','b'];
 const titreResultat = document.querySelector('.resultats h2');
 const noteResultat = document.querySelector('.note');
 const touteLesQuestions = document.querySelectorAll('.question-block');
+const raffrechir = document.querySelector('.refresh'); 
 let verifTableau = [];
 
 //fonction fléchée
@@ -11,7 +12,7 @@ form.addEventListener('submit', (e) => {
     // prévnir un comportement: éviter d'actualiser les données dans une nouvelle page
     e.preventDefault();  
 
-    // récupérer la valeur de l'input
+    // récupérer la valeur de l'input du bloc de la question
     //console.log(document.querySelector('input[name="q1"]:checked').value) 
     
     for (i = 1; i < 4; i++){
@@ -20,9 +21,10 @@ form.addEventListener('submit', (e) => {
     }
      // console.log(tableauResults) // show checked inputs
      verifFunc(tableauResults);
+     // une fois on a le console du tableau on le remet le tableau à vide 
      tableauResults = [];
 })
-
+ //prendre les résultats du bleau et les comparer avec les réponses correctes prédifinies 
 function verifFunc(tabResultats) {
 
     for(let a = 0; a < 3; a++){
@@ -44,14 +46,18 @@ function verifFunc(tabResultats) {
 // objectif: un tableau à checker
 // filtrer chaque (el) élement déffirent de true
 // objectif: détecter le nombre de fautes
+
  function afficherResultats(tabCheck) {
 
+    //longeur des fautes
    const nbDeFautes = tabCheck.filter(el => el !== true).length;
     console.log(nbDeFautes);
 
     switch(nbDeFautes) {
 
         case 0:
+            //innerText : pour ajouter du text uniquement
+            //innerHTML : pour aouter des éléments html
             titreResultat.innerText = "✔️ Bravo, c'est un sans faute ! ✔️"
             noteResultat.innerText = '3/3'
             break;
@@ -75,7 +81,7 @@ function verifFunc(tabResultats) {
         'Wops, cas inatendu.';
     }
 }
-// concerne les réponse true or false
+// concerne les réponse true or false et afficher les couleurs
 function couleurFonction(tabValBoolean){
 
     for (let i = 0; i < tabValBoolean.length; i++){
@@ -101,3 +107,7 @@ touteLesQuestions.forEach(item => {
     })
 
 })
+
+   raffrechir.addEventListener ('click', () => {
+        touteLesQuestions= "white";
+    })
