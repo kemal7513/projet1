@@ -13,6 +13,7 @@ let count = 10;
 form.addEventListener("submit", (e) => {
   // prévnir un comportement: éviter d'actualiser les données dans une nouvelle page
   e.preventDefault();
+  clearInterval(interval);
 
   // récupérer la valeur de l'input du bloc de la question
   //console.log(document.querySelector('input[name="q1"]:checked').value)
