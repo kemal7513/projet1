@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premier projet</title>
-    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet"
@@ -14,9 +14,10 @@
     <h1>Quiz Automation !</h1>
 
     <div class="container-global">
+      <div> <p class="center" id="count"> Prêt ?!</p>  </div>
       <form class="form-quiz">
         <div class="question-block">
-          <h4>Javascript est un langage ...</h4>
+          <h4>Javascript est un language ...</h4>
 
           <div>
             <input type="radio" id="compilé" name="q1" value="a" />
@@ -52,7 +53,7 @@
         </div>
 
         <div class="question-block">
-          <h4>HTML & CSS sont ils des langages de programmation ?</h4>
+          <h4>HTML & CSS sont ils des languages de programmation ?</h4>
           <div>
             <input type="radio" id="oui" name="q3" value="a" />
             <label for="oui">Oui</label>
@@ -69,11 +70,17 @@
           </div>
         </div>
 
-        <button type="submit">Validez vos choix !</button>
+        <div classe="inLineButton">
+          <button type="submit" id="submitBtn">Validez vos choix !</button>
+
+          <button type="reset" id="raffrechir" value="reset" class="refresh">
+            Essayer à nouveau
+          </button>
+        </div>
       </form>
 
       <div class="resultats">
-        <h2>Résultats ✔️ ✨ 👎</h2>
+        <h2>Résultats ✅ ✨ 👎</h2>
         <p class="note"></p>
       </div>
     </div>

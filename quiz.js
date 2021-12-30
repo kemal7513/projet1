@@ -5,8 +5,9 @@ const titreResultat = document.querySelector(".resultats h2");
 const noteResultat = document.querySelector(".note");
 const touteLesQuestions = document.querySelectorAll(".question-block");
 const raffrechir = document.querySelector(".refresh");
+const submitResponse = document.getElementById("submitBtn");
 let verifTableau = [];
-let count = 15;
+let count = 10;
 
 //fonction fléchée
 form.addEventListener("submit", (e) => {
@@ -98,18 +99,18 @@ function couleurFonction(tabValBoolean) {
 }
 
 raffrechir.addEventListener("click", () => {
+  location.reload();
   touteLesQuestions.forEach((item) => {
     item.style.background = "white";
   });
 });
 
-// const interval = setInterval(function(){
-//     document.getElementById('count').innerHTML=count;
-//     count--;
-//     if (count === 0){
-//       clearInterval(interval);
-//       document.getElementById('count').innerHTML='Done';
-//       // or...
-//       alert("You're out of time!");
-//     }
-//   }, 1000);
+const interval = setInterval(function () {
+  document.getElementById("count").innerHTML = count;
+  count--;
+  if (count === 0) {
+    clearInterval(interval);
+    document.getElementById("count").innerHTML = "Trop tard ";
+    submitResponse.disabled = true;
+  }
+}, 1000);
